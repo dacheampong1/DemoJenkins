@@ -15,11 +15,5 @@ pipeline {
       }
     }
 
-    stage('a Fluffy Deploy stage') {
-      steps {
-        echo 'Placeholder'
-      }
-    }
-
   }
 }
