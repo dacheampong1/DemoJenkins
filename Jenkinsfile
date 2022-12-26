@@ -9,7 +9,7 @@ pipeline {
 
     stage('POS Print') {
       parallel {
-        stage('POS Print') {
+        stage('Select Done') {
           steps {
             echo 'Print Receipt'
           }
