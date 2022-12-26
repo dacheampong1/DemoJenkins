@@ -8,8 +8,19 @@ pipeline {
     }
 
     stage('POS Print') {
-      steps {
-        echo 'Print Receipt'
+      parallel {
+        stage('POS Print') {
+          steps {
+            echo 'Print Receipt'
+          }
+        }
+
+        stage('Close Transaction') {
+          steps {
+            sh 'echo done'
+          }
+        }
+
       }
     }
 
